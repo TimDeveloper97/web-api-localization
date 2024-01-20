@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using trackingapi.Data;
 
@@ -10,9 +11,10 @@ using trackingapi.Data;
 namespace trackingapi.Data.Migrations
 {
     [DbContext(typeof(IssueDbContext))]
-    partial class IssueDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240115135749_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.2");
@@ -61,7 +63,7 @@ namespace trackingapi.Data.Migrations
 
                     b.HasIndex("IssueId");
 
-                    b.ToTable("Projects");
+                    b.ToTable("Project");
                 });
 
             modelBuilder.Entity("trackingapi.Models.Project", b =>

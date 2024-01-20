@@ -15,8 +15,8 @@ namespace trackingapi.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar", nullable: false),
                     Priority = table.Column<int>(type: "int", nullable: false),
                     IssueType = table.Column<int>(type: "int", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
